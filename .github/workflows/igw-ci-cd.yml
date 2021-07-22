@@ -1,4 +1,4 @@
-name: igw-ci-cd
+name: igw-ci-cd-test
 on: [push]
 jobs:
   deploy_dev:

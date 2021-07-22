@@ -8,14 +8,15 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: copy file via ssh password
-      uses: appleboy/scp-action@master
+      uses: horochx/deploy-via-scp@master
       with:
-        host: ${{ secrets.DEV_HOST }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        source: "./index.html,./bootstrap.css,./bootstrap.js,./error.html,./gallerystyle.css"
-        target: "/var/www/html/"
+        local: "./index.html,./bootstrap.css,./bootstrap.js,./error.html,./gallerystyle.css" # eg: dist/*
+        remote: "/var/www/html" # eg: /home/github-action/www
+        host: ${{ secrets.DEV_HOST }} # eg: example.com
+        port: ${{ secrets.PORT }} # eg: 22
+        user: ${{ secrets.USERNAME }} # eg: github-action
+        key: ${{ secrets.PRIVATE_KEY }} # eg: -----BEGIN OPENSSH PRIVATE KEY-----\nHEIiyzh5cT7hN...
+
   deploy_prod:
     name: deploy_prod
     environment: production

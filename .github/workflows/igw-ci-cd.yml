@@ -10,7 +10,7 @@ jobs:
     - name: copy file via ssh password
       uses: horochx/deploy-via-scp@master
       with:
-        local: "./index.html,./bootstrap.css,./bootstrap.js,./error.html,./gallerystyle.css" # eg: dist/*
+        local: "index.html,bootstrap.css,bootstrap.js,error.html,gallerystyle.css" # eg: dist/*
         remote: "/var/www/html" # eg: /home/github-action/www
         host: ${{ secrets.DEV_HOST }} # eg: example.com
         port: ${{ secrets.PORT }} # eg: 22

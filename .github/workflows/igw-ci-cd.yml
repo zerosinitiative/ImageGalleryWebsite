@@ -14,7 +14,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.PRIVATE_KEY }}
-        source: "."
+        source: "./index.html,./bootstrap.css,./bootstrap.js,./error.html,./gallerystyle.css"
         target: "/var/www/html/"
   deploy_prod:
     name: deploy_prod

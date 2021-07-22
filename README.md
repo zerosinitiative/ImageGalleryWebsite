@@ -18,3 +18,5 @@
 - We can have branch protection rules to ensure no one commits code to the master branch.
 - We have mapped a branch to an environment but we could have other pipeline strategies.
 - We could run static code analysis & security checks on pull requests.
+
+# Refer the following architecture diagram : https://lucid.app/documents/view/37685dcc-42aa-4009-891e-5bdd5be783fc
